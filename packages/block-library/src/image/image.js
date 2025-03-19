@@ -142,7 +142,7 @@ function ContentOnlyControls( {
 									aria-haspopup="dialog"
 								>
 									{ _x(
-										'Alternative text',
+										'Alternativesss text',
 										'Alternative text for an image. Block toolbar label, a low character count is preferred.'
 									) }
 								</MenuItem>
@@ -171,7 +171,7 @@ function ContentOnlyControls( {
 					<div className="wp-block-image__toolbar_content_textarea__container">
 						<TextareaControl
 							className="wp-block-image__toolbar_content_textarea"
-							label={ __( 'Alternative text' ) }
+							label={ __( 'Alternativesss text' ) }
 							value={ attributes.alt || '' }
 							onChange={ ( value ) =>
 								setAttributes( { alt: value } )
@@ -790,7 +790,7 @@ export default function Image( {
 				>
 					{ isSingleSelected && (
 						<ToolsPanelItem
-							label={ __( 'Alternative text' ) }
+							label={ __( 'Alternativesss text' ) }
 							isShownByDefault
 							hasValue={ () => !! alt }
 							onDeselect={ () =>
@@ -798,7 +798,7 @@ export default function Image( {
 							}
 						>
 							<TextareaControl
-								label={ __( 'Alternative text' ) }
+								label={ __( 'Alternativesss text' ) }
 								value={ alt || '' }
 								onChange={ updateAlt }
 								readOnly={ lockAltControls }
