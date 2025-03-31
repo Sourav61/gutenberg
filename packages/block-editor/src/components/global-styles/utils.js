@@ -11,6 +11,7 @@ import { getCSSValueFromRawStyle } from '@wordpress/style-engine';
 
 // import { useSelect, registerStore } from '@wordpress/data';
 // import { store as editPostStore } from '@wordpress/edit-post';
+// import { useEffect, useState } from '@wordpress/element';
 
 /**
  * Internal dependencies
@@ -162,6 +163,21 @@ export function useToolsPanelDropdownMenuProps() {
 
 	// // Set offset dynamically based on sidebar state
 	// const offset = isSidebarOpen ? 259 : -274; // Reduced offset when sidebar is collapsed
+
+	// const [context, setContext] = useState(null);
+
+	// useEffect(() => {
+	// 	if (popoverAnchor) {
+	// 		const sidebar = popoverAnchor.closest('.edit-site-sidebar, .edit-post-sidebar');
+	// 		if (sidebar?.classList.contains('edit-site-sidebar')) {
+	// 			setContext('styles-sidebar');
+	// 		} else if (sidebar?.classList.contains('edit-post-sidebar')) {
+	// 			setContext('post-editor-sidebar');
+	// 		}
+	// 	}
+	// }, [popoverAnchor]);
+
+	// const offset = context === 'styles-sidebar' ? 259 : 279; // Adjust if needed
 
 	return ! isMobile
 		? {
