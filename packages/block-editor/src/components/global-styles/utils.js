@@ -9,6 +9,9 @@ import fastDeepEqual from 'fast-deep-equal/es6';
 import { useViewportMatch } from '@wordpress/compose';
 import { getCSSValueFromRawStyle } from '@wordpress/style-engine';
 
+// import { useSelect, registerStore } from '@wordpress/data';
+// import { store as editPostStore } from '@wordpress/edit-post';
+
 /**
  * Internal dependencies
  */
@@ -144,6 +147,22 @@ export const STYLE_PATH_TO_PRESET_BLOCK_ATTRIBUTE = {
 
 export function useToolsPanelDropdownMenuProps() {
 	const isMobile = useViewportMatch( 'medium', '<' );
+	// Ensure store is registered
+	// registerStore('core/edit-post', editPostStore);
+
+	// // Check if the sidebar is collapsed
+	// const isSidebarOpen = useSelect( ( select ) => {
+	// 	const editPost = select( 'core/edit-post' );
+	// 	console.log('editPost', editPost );
+
+	// 	return editPost ? editPost.isEditorSidebarOpened() : false;
+	// } );
+
+	// console.log('globalStylesSidebar', isSidebarOpen );
+
+	// // Set offset dynamically based on sidebar state
+	// const offset = isSidebarOpen ? 259 : -274; // Reduced offset when sidebar is collapsed
+
 	return ! isMobile
 		? {
 				popoverProps: {
